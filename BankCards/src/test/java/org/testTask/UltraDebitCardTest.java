@@ -14,12 +14,12 @@ class UltraDebitCardTest {
         card2.fillUpBalance("10000");
 //Test1
         Assertions.assertEquals(true, card2.pay("5000"));
-        Assertions.assertEquals("5250.0", card2.balance.getBalance());
+        Assertions.assertEquals("5250.00000", card2.balance.getBalance());
 //Test2
         Assertions.assertEquals(true, card1.pay("1000"));
-        Assertions.assertEquals("9000.0", card1.balance.getBalance());
+        Assertions.assertEquals("9000", card1.balance.getBalance());
 //Test3
         Assertions.assertEquals(false, card1.pay("33333.111"));
-        Assertions.assertEquals("9000.0", card1.balance.getBalance());
+        Assertions.assertEquals("9000", card1.balance.getBalance());
     }
 }

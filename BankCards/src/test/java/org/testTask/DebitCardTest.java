@@ -9,7 +9,7 @@ public class DebitCardTest {
     @Test
     public void testFillUpBalance() {
         card1.fillUpBalance("100");
-        Assertions.assertEquals("100.0", card1.getBalance().toString());
+        Assertions.assertEquals("100", card1.getBalance().toString());
         card1.fillUpBalance("100.01");
         Assertions.assertEquals("200.01", card1.getBalance().toString());
 

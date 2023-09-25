@@ -10,8 +10,8 @@ class CreditCardTest {
 
     void testFillUpBalance() {
         card1.fillUpBalance("5000");
-        Assertions.assertEquals("5000.0", card1.balance.getBalance());
-        Assertions.assertEquals("10000.0", card1.getCreditBalance());
+        Assertions.assertEquals("5000", card1.balance.getBalance());
+        Assertions.assertEquals("10000", card1.getCreditBalance());
 
     }
     @Test
@@ -20,20 +20,20 @@ class CreditCardTest {
 //test1
         card1.fillUpBalance("5000");
         card1.pay("16000"); //not enough money
-        Assertions.assertEquals("5000.0", card1.balance.getBalance());
-        Assertions.assertEquals("10000.0", card1.getCreditBalance());
+        Assertions.assertEquals("5000", card1.balance.getBalance());
+        Assertions.assertEquals("10000", card1.getCreditBalance());
 //test2
         card1.pay("10000"); // balance + creditBalance >= price
-        Assertions.assertEquals("0.0", card1.balance.getBalance());
-        Assertions.assertEquals("5000.0", card1.getCreditBalance());
+        Assertions.assertEquals("0", card1.balance.getBalance());
+        Assertions.assertEquals("5000", card1.getCreditBalance());
 //test3
         card1.pay("10000"); //not enough money
-        Assertions.assertEquals("0.0", card1.balance.getBalance());
-        Assertions.assertEquals("5000.0", card1.getCreditBalance());
+        Assertions.assertEquals("0", card1.balance.getBalance());
+        Assertions.assertEquals("5000", card1.getCreditBalance());
 //test4
         card1.pay("5000");
-        Assertions.assertEquals("0.0", card1.balance.getBalance());
-        Assertions.assertEquals("0.0", card1.getCreditBalance());
+        Assertions.assertEquals("0", card1.balance.getBalance());
+        Assertions.assertEquals("0", card1.getCreditBalance());
     }
 
     @Test
@@ -41,20 +41,20 @@ class CreditCardTest {
         card1.fillUpBalance("5000");
 //test1
         card1.pay("5000");
-        Assertions.assertEquals("0.0", card1.balance.getBalance());
-        Assertions.assertEquals("10000.0", card1.getCreditBalance());
+        Assertions.assertEquals("0", card1.balance.getBalance());
+        Assertions.assertEquals("10000", card1.getCreditBalance());
 //test2
         card1.pay("3000");
-        Assertions.assertEquals("0.0", card1.balance.getBalance());
-        Assertions.assertEquals("7000.0", card1.getCreditBalance());
+        Assertions.assertEquals("0", card1.balance.getBalance());
+        Assertions.assertEquals("7000", card1.getCreditBalance());
 //test3
         card1.fillUpBalance("2000");
-        Assertions.assertEquals("0.0", card1.balance.getBalance());
-        Assertions.assertEquals("9000.0", card1.getCreditBalance());
+        Assertions.assertEquals("0", card1.balance.getBalance());
+        Assertions.assertEquals("9000", card1.getCreditBalance());
 //test4
         card1.fillUpBalance("2000");
-        Assertions.assertEquals("1000.0", card1.balance.getBalance());
-        Assertions.assertEquals("10000.0", card1.getCreditBalance());
+        Assertions.assertEquals("1000", card1.balance.getBalance());
+        Assertions.assertEquals("10000", card1.getCreditBalance());
     }
 
 }

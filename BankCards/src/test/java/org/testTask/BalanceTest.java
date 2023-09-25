@@ -13,21 +13,22 @@ public class BalanceTest {
     @Test
     void testFilingBalance() {
 //test1
+
         balance1.filingBalance("100");
-        Assertions.assertEquals("1100.0", balance1.getBalance());
+        Assertions.assertEquals("1100", balance1.getBalance());
 //test2
         balance4.filingBalance("500");
-        Assertions.assertEquals("500.0", balance4.getBalance());
+        Assertions.assertEquals("500", balance4.getBalance());
 
     }
     @Test
     void testGetBalance() {
-        Assertions.assertEquals("1000.0", balance1.getBalance());
+        Assertions.assertEquals("1000", balance1.getBalance());
     }
     @Test
     void testReduceBalance() {
         balance3.reduceBalance("100");
-        Assertions.assertEquals("2900.0", balance3.getBalance());
+        Assertions.assertEquals("2900", balance3.getBalance());
 
     }
     @Test

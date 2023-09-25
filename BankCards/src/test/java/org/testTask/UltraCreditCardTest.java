@@ -11,6 +11,6 @@ class UltraCreditCardTest {
     void testFillUpBalance() {
         card.fillUpBalance("5000");
         Assertions.assertEquals("5000.25", card.balance.getBalance());
-        Assertions.assertEquals("10000.0", card.getCreditBalance());
+        Assertions.assertEquals("10000", card.getCreditBalance());
     }
 }
